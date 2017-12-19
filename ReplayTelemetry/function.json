@@ -16,7 +16,7 @@
         {
             "type": "blob",
             "name": "jsonBlob",
-            "tableName": "asacontainer",
+            "path": "asacontainer/0_53d65b0777b8478c97c21c3e5b12854b_1.json",
             "connection": "sbdhackathon9e0f_STORAGE",
             "direction": "in"
         }
