@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "sbdIoTHubXmlMessage",
+      "direction": "in",
+      "path": "sbdhackathon",
+      "connection": "SBDhackathon_events_IOTHUB",
+      "consumerGroup": "function",
+      "cardinality": "many"
+    },
+    {
+      "type": "eventHub",
+      "name": "$return",
+      "connection": "sbdhackathoneventhubnamespace_RootManageSharedAccessKey_EVENTHUB",
+      "path": "sbdhackathonsws",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
