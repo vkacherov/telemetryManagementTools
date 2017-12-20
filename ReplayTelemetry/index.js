@@ -1,12 +1,9 @@
 module.exports = function(context, req, jsonBlob) {
-    context.log("Retrieved records:", jsonBlob);
+    context.log("Retrieved blob data:", jsonBlob);
 
-    let result = "";
-    // Parse the blob JSON
-    JSON.parse(jsonBlob, (key, value) => {
-        result[key] = value;
-        context.log("Adding key:" + key + ", value:" + value);
-    });
+    // Parse the blob JSON    
+    let result = JSON.parse(jsonBlob);
+    context.log("Found records:", Object.keys(result).length);
 
     context.res = {
         status: 200,
